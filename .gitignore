@@ -5,4 +5,4 @@ native-host/.extension-private-key.pem
 *.crx
 *.pem
 *.log
-Icon?
+Icon[[:cntrl:]]
