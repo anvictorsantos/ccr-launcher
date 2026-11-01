@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+native-host/config.json
+native-host/.extension-private-key.pem
+*.crx
+*.pem
+*.log
+Icon?

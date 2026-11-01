@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "CCR Launcher",
+  "version": "1.0.0",
+  "description": "Opens the claude-code-router UI. Starts the CCR service first when it is not running.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA87+Co8i27HoRC/awE9FeY+mzegO7UvjWEmWugFqh8T15chDZ1bw36DxDYFx6i4B3jdwJyEAwlHbR/d8Whh33LoYs6qQ8r69o9FO7YfHV/VWOsVidN0loXE3Hyhsp3qiHBV0M8aZn3+FE9Rg/ECPln4okNv6Lg2q+60wX1IPqpdR/zqE/I/P5GA4g5YdaryA/toGmL23U4OzeGdqaUOlMXwJxhMOcVXOIwbb6v2UtRNLfCX+6HQvXMzwIDBcxheO6k7RKkSrq3qv+6bcW8LVbPIa1nT3eZRicEXOtHqabe1KUotM4l9tm6CpyNI/93SuS7oJOH+1B9RbHdCogSEF6JQIDAQAB",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Open CCR UI",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["nativeMessaging", "tabs"],
+  "host_permissions": ["http://127.0.0.1/*", "http://localhost/*"]
+}

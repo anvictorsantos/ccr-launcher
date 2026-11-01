@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CCR</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <div class="head">
+        <span class="mark" aria-hidden="true"></span>
+        <div>
+          <h1>CCR Launcher</h1>
+          <p class="sub">claude-code-router</p>
+        </div>
+      </div>
+
+      <section id="state" class="state" aria-live="polite">
+        <span class="spinner" aria-hidden="true"></span>
+        <p id="message">Waking CCR…</p>
+      </section>
+
+      <section id="error" class="error" hidden>
+        <p id="errorMessage"></p>
+        <p class="hint">Native helper not installed yet. Run this in a terminal:</p>
+        <div class="cmd">
+          <code id="installCmd">node "…/ccr-launcher/native-host/install.mjs"</code>
+          <button id="copyBtn" type="button" title="Copy command">Copy</button>
+        </div>
+        <div class="actions">
+          <button id="retryBtn" type="button" class="primary">Try again</button>
+          <a id="openLink" href="#" target="_blank" rel="noreferrer" hidden>Open UI anyway</a>
+        </div>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

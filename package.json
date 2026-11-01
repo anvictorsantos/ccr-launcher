@@ -1,0 +1,11 @@
+{
+  "name": "ccr-launcher",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chrome extension that opens the claude-code-router UI and starts the service when needed.",
+  "scripts": {
+    "install-host": "node native-host/install.mjs",
+    "uninstall-host": "node native-host/install.mjs --uninstall",
+    "icons": "node tools/make-icons.mjs"
+  }
+}

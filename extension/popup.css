@@ -1,0 +1,170 @@
+:root {
+  color-scheme: dark;
+  --bg: #0b0d12;
+  --panel: #141821;
+  --line: #232a38;
+  --text: #e6e9f2;
+  --muted: #8b93a7;
+  --accent: #7c6cff;
+  --danger: #ff7a7a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 320px;
+  background: var(--bg);
+  color: var(--text);
+  font: 13px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+main {
+  padding: 14px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.mark {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: linear-gradient(140deg, var(--accent), #4a3fd0);
+  box-shadow: 0 0 0 1px #ffffff14 inset;
+  flex: none;
+}
+
+h1 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.sub {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.state {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+}
+
+.state p {
+  margin: 0;
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #ffffff24;
+  border-top-color: var(--accent);
+  animation: spin 0.8s linear infinite;
+  flex: none;
+}
+
+.state.done .spinner {
+  border: 0;
+  background: #34d399;
+  animation: none;
+}
+
+.state.fail .spinner {
+  border: 0;
+  background: var(--danger);
+  animation: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  margin-top: 12px;
+}
+
+.error p {
+  margin: 0 0 8px;
+  color: #ffd0d0;
+}
+
+.hint {
+  color: var(--muted) !important;
+  font-size: 12px;
+}
+
+.cmd {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+code {
+  flex: 1;
+  min-width: 0;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #0f131b;
+  font: 11px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: #cfd5e6;
+  overflow-wrap: anywhere;
+}
+
+button {
+  font: inherit;
+  color: var(--text);
+  background: #1c2230;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #232a3a;
+}
+
+.primary {
+  background: var(--accent);
+  border-color: transparent;
+  color: #0b0d12;
+  font-weight: 600;
+}
+
+.primary:hover {
+  background: #8d7fff;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+a {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+[hidden] {
+  display: none !important;
+}
